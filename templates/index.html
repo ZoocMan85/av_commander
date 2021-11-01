@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+ <!-- Custom CSS -->
+<link rel ="stylesheet" href={%static "css/index.css" %}>
+<br>
+<center><h3> Newmark Education Gaming Wall Controls </h3> </center>
+<div class="container-fluid"  id = "main_controls">
+
+<div class="row">
+    <div class="col-sm">
+       <!-- Card Start-->
+      <div class="card" style="width: 11rem;">
+       <center><img src={% static "power.png" %} alt="power on" class ="icon"  height="150" width= "150" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">Power On</h5>         
+             <form action = "/api/power_on" method="GET">
+                   <td><button type = "submit" class="btn btn-primary mb-3" role="button"> Submit </button> </td>
+                   </form>
+        </div>
+        </div></center>
+      <!-- Card End-->
+    </div>
+    <div class="col-sm">
+      <!-- Card Start-->
+     <div class="card" style="width: 11rem;">
+        <center><img src={% static "power-off.png" %} alt="power off" class ="icon"  height="150" width= "150"class="card-img-top" >
+        <div class="card-body">
+            <h5 class="card-title">Power Off</h5>
+             <form action = "/api/power_off" method="GET">
+                   <td><button type = "submit" class="btn btn-primary mb-3" role="button"> Submit </button> </td>
+                   </form>
+        </div>
+        </div>
+      <!-- Card End-->
+    </div>
+    <div class="col-sm">
+      <!-- Card Start-->
+        <div class="card" style="width: 11rem;">
+        <center><img src={% static "volume up.png" %} alt="volume up" class ="icon"  height="150" width= "150" class="card-img-top"> 
+        <div class="card-body">
+            <h5 class="card-title">Volume On</h5>
+             <form action = "/api/volume_up" method="GET">
+                   <td><button type = "submit" class="btn btn-primary mb-3" role="button"> Submit </button> </td>
+                   </form>
+        </div> 
+        </div></center>
+      <!-- Card End-->     
+    </div>
+    <div class="col-sm">
+      <!-- Card Start-->
+        <div class="card" style="width: 11rem;">
+       <center><img src={% static "volume down.png" %} alt="volume down" class ="icon"  height="150" width= "150" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">Volume Off</h5>
+             <form action = "/api/volume_down" method="GET">
+                   <td><button type = "submit" class="btn btn-primary mb-3" role="button"> Submit </button> </td>
+                   </form>
+        </div>
+        </div></center>
+      <!-- Card End-->      
+    </div>
+    </div>   
+</div>
+
+ 
+{% endblock content %}
+  
+

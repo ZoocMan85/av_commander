@@ -1,0 +1,42 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/9571fdc7fc.js" crossorigin="anonymous"></script>
+    
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+   
+
+    <title>AV Commander</title>
+    <!-- Image and text -->
+
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+            <img src={% static "av_logo.png" %} height="55" width= "200" class="d-inline-block align-text-top">
+            </a>
+        </div>
+        </nav>
+    {% block content %}
+    {% endblock content %}
+
+    </body>
+  
+   <!-- Footer -->
+<footer class="page-footer font-small blue pt-4">
+ <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">Newmark Education IT Data Systems © AV_Commander V 0.1 2021 Copyright
+  </div>
+</footer>
+</div>
+</html>
+ 
