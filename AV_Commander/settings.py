@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+ozty-0m^(%s=2k7w7dyfs@9-kqiz*xd4!1b_hg(rwgm0&=$en'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    '127.0.0.1', '10.128.1.76', '10.128.2.250'
+    '127.0.0.1', '10.128.2.250'
 ]
 
 
@@ -120,8 +120,8 @@ TIME_ZONE = 'America/New_York'
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')
-]
+STATIC_ROOT = '/home/rzuchowski/env/av_commander/av_commander/static'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
