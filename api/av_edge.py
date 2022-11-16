@@ -1,4 +1,5 @@
 import telnetlib
+import time
 
 # POWERS GAMING WALL ON
 def GameRoomPowerOn(request):
@@ -9,9 +10,14 @@ def GameRoomPowerOn(request):
     grtv3 = "config set device cec poweron GAMERM_TV3" 
     grtv4 = "config set device cec poweron GAMERM_TV4" 
     tn.write(grtv1.encode('ascii') + b"\r\n")
+    time.sleep(10)
     tn.write(grtv2.encode('ascii') + b"\r\n")
+    time.sleep(10)
     tn.write(grtv3.encode('ascii') + b"\r\n")
+    time.sleep(10)
     tn.write(grtv4.encode('ascii') + b"\r\n")
+    print("Poweron Command Sent to Gaming Wall")
+    print("Closing telnet session")
     tn.close()
 
 
@@ -24,9 +30,14 @@ def GameRoomPowerOff(request):
     grtv3 = "config set device cec poweroff GAMERM_TV3" 
     grtv4 = "config set device cec poweroff GAMERM_TV4" 
     tn.write(grtv1.encode('ascii') + b"\r\n")
+    time.sleep(10)
     tn.write(grtv2.encode('ascii') + b"\r\n")
+    time.sleep(10)
     tn.write(grtv3.encode('ascii') + b"\r\n")
+    time.sleep(10)
     tn.write(grtv4.encode('ascii') + b"\r\n")
+    print("Poweron Command Sent to Gaming Wall")
+    print("Closing telnet session")
     tn.close()    
 
 # VOLUME UP GAMING WALL
@@ -38,9 +49,14 @@ def GameRoomVolumeUp(request):
     grtv3 = "config set device rs232 1 kf 00 09 \r GAMERM_TV3" 
     grtv4 = "config set device rs232 1 kf 00 09 \r GAMERM_TV4" 
     tn.write(grtv1.encode('ascii') + b"\r\n")
+    time.sleep(10)
     tn.write(grtv2.encode('ascii') + b"\r\n")
+    time.sleep(10)
     tn.write(grtv3.encode('ascii') + b"\r\n")
+    time.sleep(10)
     tn.write(grtv4.encode('ascii') + b"\r\n")
+    print("Volume Command Sent to Gaming Wall")
+    print("Closing telnet session")
     tn.close()    
 
 
@@ -53,7 +69,12 @@ def GameRoomVolumeDown(request):
     grtv3 = "config set device rs232 1 kf 00 00 \r GAMERM_TV3" 
     grtv4 = "config set device rs232 1 kf 00 00 \r GAMERM_TV4" 
     tn.write(grtv1.encode('ascii') + b"\r\n")
+    time.sleep(10)
     tn.write(grtv2.encode('ascii') + b"\r\n")
+    time.sleep(10)
     tn.write(grtv3.encode('ascii') + b"\r\n")
+    time.sleep(10)
     tn.write(grtv4.encode('ascii') + b"\r\n")
+    print("Volume Command Sent to Gaming Wall")
+    print("Closing telnet session")
     tn.close()       
